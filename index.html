@@ -1030,12 +1030,24 @@
 
     <script>
         // Configuração Firebase (será preenchida pelo usuário)
-        let firebaseConfig = null;
-        let database = null;
-        let isFirebaseConfigured = false;
-        let veiculosRef = null;
-        let historicoRef = null;
-        let configRef = null;
+        let firebaseConfig = // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBQ1tNGi9KZALpaQvzK98zeoXwuuZoHyms",
+  authDomain: "estacionamento-praia-731c8.firebaseapp.com",
+  databaseURL: "https://estacionamento-praia-731c8-default-rtdb.firebaseio.com",
+  projectId: "estacionamento-praia-731c8",
+  storageBucket: "estacionamento-praia-731c8.firebasestorage.app",
+  messagingSenderId: "933632510590",
+  appId: "1:933632510590:web:28db31c41c4efffe49262f"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
         // Dados do sistema
         let config = {
